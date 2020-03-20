@@ -1,0 +1,681 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none;max-width: 100%;}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+/* Global page modifiers  */
+
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+
+    max-width: 960px; /* 2 */
+
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+}
+
+.sectionTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    width: 60%;
+}
+
+.orange {
+    color:#e1560e;
+}
+
+a.detail {
+    background-color: #e1540ecc;
+    font-size: 1.2rem;
+    border:none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    transition: all 1s;
+}
+
+
+
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Great Vibes', cursive;
+    font-weight: lighter;
+}
+
+.gallery h1 ,
+.gallery p,
+.gallery a,
+.gallery h2{
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 0;
+}
+
+h3 {
+    font-size: calc(1.7rem + 0.1vw);
+    font-family: 'Playfair Display', serif;
+    margin: 2px 0;
+    color: white;
+}
+
+p, a, em {
+    font-size: calc(1.2rem + 0.1vw);
+    margin: 0;
+    color: grey;
+    text-decoration: none;
+}
+
+em {
+    font-size: calc(1.3rem + 0.1vw);
+    font-style: italic;
+}
+
+.leftRight {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* header stylings start here  */
+
+header {
+    /* position: relative; */
+    background-image: url(assets/image-1.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+    
+    
+
+}
+
+.sidebarBleed {
+    position: absolute;
+    left:0;
+    width: 10%;
+    height: 100vh;
+    
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sidebarWrap {
+    width: 80%;
+    padding: 20px;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-self: center;
+    
+    
+    
+}
+nav li {
+    
+    list-style: none;
+    
+}
+
+nav li a:hover,
+nav li a:focus {
+    color: white;
+}
+
+nav li a {
+    font-size: calc(100% + 0.1vw);
+    text-transform: uppercase;
+    
+    
+}
+
+
+
+
+.logo {
+    margin: 0 auto;
+    padding: 5px;
+    min-width: 75px;
+    min-height: 75px;
+}
+
+
+
+
+nav ul {
+    
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+header .content {
+    text-align: center;
+    height: 100%;
+    padding-top: 25%;
+}
+
+
+
+nav {
+    height: 40%;
+}
+
+.twitter {
+    height: 30%;
+}
+
+.sidebarBottom {
+    height: 15%;
+    margin: 0 auto;
+    padding-top: 15%;
+    color: grey;
+}
+
+.logo,
+nav,
+.twitter {
+    border-bottom: 1px solid grey;
+    
+}
+
+
+.twitter a {
+    word-break: break-all;
+    
+    color: grey;
+}
+
+.twitter a:hover
+.twitter a:focus {
+    color: white;
+}
+
+.socialMediaLogos {
+    word-spacing: 5px;
+}
+
+.twitterLogo {
+    font-size: 3rem;
+}
+
+
+
+
+
+
+.headerCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15% 25% 25% 25%;
+}
+
+a.detail:hover,
+a.detail:focus {
+    background: white;
+    color: #e1540ecc;
+}
+
+/* header stylings end here  */
+
+/* main page stylings start here */
+
+/* chef section styling starts here  */
+
+.chef {
+    background-color:#eae5d6;
+    
+    display: flex;
+}
+
+.chefLeft {
+    width: 50%;
+    padding-left: 25%;
+}
+
+.chefPicture {
+    width: 50%;
+    
+}
+.profilePic img {
+    border-radius:50%;
+    
+    
+}
+
+.profilePic {
+    width: 20%;
+}
+
+.profile div:last-child {
+    width: 80%;
+    padding: 5px;
+}
+
+.chef .profile {
+    display: flex;
+    
+    justify-content: start;
+    
+    
+}
+
+.chefLeft p {
+    margin: 4% 0;
+}
+
+.chefLeft em {
+    color: #23292c;
+    
+}
+
+.chefLeft a {
+    
+    font-size: 5rem;
+}
+
+.chefLeft a:hover,
+.chefLeft a:focus {
+    color: #e1560e;
+}
+
+
+
+
+/* chef section styling stops here  */
+
+/* gallery section styling starts here  */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    background:#23292c;
+    
+
+}
+
+
+
+.gallery em{
+    color: white;
+}
+
+.galleryBar {
+    margin: 30px 0;
+    border: 1px solid grey;
+    padding: 10px 20px;
+    word-spacing: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.gallery .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.galleryBar a{
+
+    text-transform: uppercase;
+
+}
+
+.galleryBar a:after {
+    content: '|';
+    padding-left: 10px;
+    color: grey;
+}
+
+.gallery a:last-child:after {
+    content: none;
+}
+
+.galleryBar a:hover,
+.galleryBar a:focus {
+    color: #e1560e;
+}
+
+
+
+
+.pictures{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.picAndWords {
+    position: relative;
+    width: 20%;
+    transition: all 0.5s;
+    
+}
+
+.gallery img {
+    
+    height: 100%;
+}
+
+.picDesc {
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.searchLink {
+    position: absolute;
+    bottom:0;
+    display: flex;
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+
+.searchLink a {
+    display: inline-block;
+    background: white;
+    min-height: 30px;
+    min-width: 30px;
+    border: 1px solid black;
+    
+}
+
+.picAndWords:hover .picDesc,
+.picAndWords:hover .searchLink,
+.picAndWords:focus .picDesc,
+.picAndWords:focus .searchLink{
+    opacity: 1;
+}
+
+/* end of gallery section stylings  */
+
+/* start of services section stylings  */
+
+.services .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foodTimes {
+    display: flex;
+    margin: 30px 0;
+    
+    justify-content: space-around;
+    width: 100%;
+}
+
+.foodDesc {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.time {
+    text-align: center;
+}
+
+.time h2 {
+    color: #e1560e;
+}
+
+/* end of services section stylings  */
+
+/* Start of the menu section styling  */
+
+.menu {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7) 100%, rgba(0,0,0,0.7) 100%), url(./assets/image-13-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu .wrapper  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.menu h1 {
+    color: white;
+}
+
+.menu .leftRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 133.5px 0;
+}
+
+.menu .leftRight a:hover,
+.menu .leftRight a:focus {
+    color: #e1560e;
+}
+
+.menu .leftRight a {
+    font-size: 5rem;
+}
+
+.menuItems {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.menuLeft {
+    width: 50%;
+}
+
+.menuRight {
+    width: 50%;
+    padding-left: 20px;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    margin: auto 0;
+    padding: 0;
+}
+
+.list {
+    display: flex;
+    color: white;
+    font-size: calc(1.2rem + 0.1vw);
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.first {
+    margin-right: 0.5em;
+    flex: 1;
+    display: flex;
+}
+
+.price {
+    text-align: right;
+    flex: 0 0 2em;
+}
+
+.first:after {
+    content: '';
+    border-bottom: dashed 1px white;
+    flex:1;
+}
+
+
+
+/* menu section styling ends here  */
+
+
+
+/* Responsive design stylings starts here  */
+
+
+
+@media (max-width: 1300px) {
+    .sidebarBleed {
+        width: 20%;
+    }
+    .chefLeft {
+        
+        padding-left: 10%;
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+    .sidebarBleed {
+        width: 30%;
+    }
+
+    .chefPicture {
+        display:none;
+    }
+
+    .chef {
+        justify-content: center;
+    }
+
+    .chefLeft {
+        width: 80%;
+        padding-left: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .picAndWords {
+        width: calc(100%/3);
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebarBleed {
+        width: 40%;
+    }
+
+    .picAndWords {
+        width: calc(100%/2);
+    }
+
+    .menu .leftRight {
+        position: relative;
+        
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebarBleed {
+        width: 100%;
+    }
+    .headerCenter {
+        display:none;
+    }
+
+    header ul {
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    div.content {
+        padding-top: 30px;
+    }
+
+    div.sidebarBottom {
+        padding-top: 25px;
+        
+    }
+
+    .services .sectionTitle h1 {
+        text-align: center;
+    }
+
+    .foodTimes {
+        display: none;
+    }
+
+    .foodDesc {
+        flex-wrap: wrap;
+    }
+
+    .time {
+        width: 50%;
+        
+    }
+
+    .menuLeft {
+        width: 100%;
+    }
+
+    .menuRight {
+        width: 100%;
+        padding-left: 0;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .picAndWords {
+        width: 100%;
+    }
+
+
+}
